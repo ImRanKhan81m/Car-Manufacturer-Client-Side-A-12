@@ -15,9 +15,10 @@ const Home = () => {
             <ManufacturerProducts/>
             <BusinessSummery/>
             <NewArrivals/>
+            <ShopBrands/>
             <CategoriesShop/>
             <Review/>
-            <ShopBrands/>
+            
             <Footer/>
         </div>
     );

@@ -8,7 +8,7 @@ import img6 from '../../assets/Brand/b6.jpg'
 
 const ShopBrands = () => {
     return (
-        <div className='mb-10'>
+        <div className='my-14'>
             <div className='mid-content'>
                 <p className='text-center text-primary font-bold'>TOP QUALITY PARTNERS</p>
                 <h1 className='text-center text-3xl font-bold'>SHOP BY BRANDS</h1>
