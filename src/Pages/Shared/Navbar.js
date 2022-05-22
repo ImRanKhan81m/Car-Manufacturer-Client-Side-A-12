@@ -16,7 +16,7 @@ const Navbar = () => {
 
     return (
         <header className='sticky top-0 z-10 py-1 bg-secondary shadow-sm lg:px-1 md:px-0 sm:px-0 px-0'>
-            <div className="navbar mid-content ">
+            <div style={{maxWidth:'1440px', margin:'auto'}} className="navbar lg:mid-content">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex="0" className="btn btn-ghost lg:hidden">

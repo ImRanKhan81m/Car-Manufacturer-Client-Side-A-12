@@ -11,12 +11,12 @@ const NewArrivals = () => {
         <div className='mid-content'>
             <h2 className='text-center text-primary  font-bold'>TOP NEW IN THE WEEK</h2>
             <h1 className='text-center text-3xl font-bold'>NEW ARRIVALS</h1>
-            <div className='grid grid-cols-4 gap-5  pt-10'>
+            <div className='grid lg:grid-cols-4 md:grid-cols-4 sm:grid-cols-2 gap-5  pt-10'>
                 <div class="card bg-base-100 shadow-xl border">
                     <figure class="p-0">
                         <img src={img1} alt="Shoes" class="rounded-xl" />
                     </figure>
-                    <div class="card-body items-center text-center">
+                    <div class="card-body items-center text-center py-0 px-2 lg:mb-10 mb-5">
                         <h2 class="card-title">VOLUP TATEM ACCU</h2>
                         <div class="rating rating-sm">
                             <input type="radio" name="rating-9" class="rating-hidden" />
@@ -33,7 +33,7 @@ const NewArrivals = () => {
                     <figure class="p-0">
                         <img src={img2} alt="Shoes" class="rounded-xl" />
                     </figure>
-                    <div class="card-body items-center text-center">
+                    <div class="card-body items-center text-center py-0 px-2 lg:mb-10 mb-5">
                         <h2 class="card-title">STUCKRUM BRESAO</h2>
                         <div class="rating rating-sm">
                             <input type="radio" name="rating-9" class="rating-hidden" />
@@ -50,7 +50,7 @@ const NewArrivals = () => {
                     <figure class="p-0">
                         <img src={img3} alt="Shoes" class="rounded-xl" />
                     </figure>
-                    <div class="card-body items-center text-center">
+                    <div class="card-body items-center text-center py-0 px-2 lg:mb-10 mb-5">
                         <h2 class="card-title">RENPUIS CONSUAT</h2>
                         <div class="rating rating-sm">
                             <input type="radio" name="rating-9" class="mask mask-star" />
@@ -66,7 +66,7 @@ const NewArrivals = () => {
                     <figure class="p-0">
                         <img src={img4} alt="Shoes" class="rounded-xl" />
                     </figure>
-                    <div class="card-body items-center text-center">
+                    <div class="card-body items-center text-center py-0 px-2 lg:mb-10 mb-5">
                         <h2 class="card-title">REMPORUM STICK</h2>
                         <div class="rating rating-sm">
                             <input type="radio" name="rating-9" class="rating-hidden" />
