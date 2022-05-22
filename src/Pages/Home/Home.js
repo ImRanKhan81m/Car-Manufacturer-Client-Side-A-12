@@ -1,5 +1,6 @@
 import React from 'react';
 import ManufacturerProducts from '../ManufacturerProducts/ManufacturerProducts';
+import Review from '../Review/Review';
 import Footer from '../Shared/Footer';
 import Banner from './Banner';
 import BusinessSummery from './BusinessSummery';
@@ -15,6 +16,7 @@ const Home = () => {
             <BusinessSummery/>
             <NewArrivals/>
             <CategoriesShop/>
+            <Review/>
             <ShopBrands/>
             <Footer/>
         </div>
