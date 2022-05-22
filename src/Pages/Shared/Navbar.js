@@ -6,15 +6,16 @@ const Navbar = () => {
     const menuItems = <>
         <li><Link to="/">Home</Link></li>
         <li><NavLink to="/blog">Blog</NavLink></li>
-        <li><NavLink to="/about">About</NavLink></li>
+        {/* <li><NavLink to="/about">About</NavLink></li> */}
         <li><NavLink to="/reviews">Review</NavLink></li>
         <li><NavLink to="/contact">Contact</NavLink></li>
-        <li><NavLink to="/profile">My Profile</NavLink></li>
+        <li><NavLink to="/profile">MyProfile</NavLink></li>
+        <li><NavLink to="/login">Login</NavLink></li>
 
     </>
 
     return (
-        <header className='sticky top-0 z-10 py-1 bg-base-100 shadow-sm lg:px-1 md:px-0 sm:px-0 px-0'>
+        <header className='sticky top-0 z-10 py-1 bg-secondary shadow-sm lg:px-1 md:px-0 sm:px-0 px-0'>
             <div className="navbar mid-content ">
                 <div className="navbar-start">
                     <div className="dropdown">
@@ -25,7 +26,7 @@ const Navbar = () => {
                             {menuItems}
                         </ul>
                     </div>
-                    <Link to={'/'} className="btn btn-ghost normal-case text-2xl font-bold">CarTools Manufacturer</Link>
+                    <Link to={'/'} className="btn btn-ghost normal-case lg:text-2xl text-xl font-bold p-0">CarTools Manufacturer</Link>
                 </div>
                 <div className="navbar-end hidden lg:flex ">
                     <ul className="menu menu-horizontal p-0">
