@@ -5,7 +5,6 @@ import Home from "./Pages/Home/Home";
 import Login from "./Pages/Authentication/Login/Login";
 import MyProfile from "./Pages/MyProfile/MyProfile";
 import Review from "./Pages/Review/Review";
-import Footer from "./Pages/Shared/Footer";
 import Navbar from "./Pages/Shared/Navbar";
 import SignUp from "./Pages/Authentication/Login/SignUp";
 
@@ -24,7 +23,6 @@ function App() {
         <Route path="/login" element={<Login/>}/>
         <Route path="/signup" element={<SignUp/>}/>
       </Routes>
-      {/* <Footer/> */}
     </div>
   );
 }

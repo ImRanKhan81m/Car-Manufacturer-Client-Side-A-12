@@ -1,4 +1,5 @@
 import React from 'react';
+import ManufacturerProducts from '../ManufacturerProducts/ManufacturerProducts';
 import Footer from '../Shared/Footer';
 import Banner from './Banner';
 import BusinessSummery from './BusinessSummery';
@@ -10,6 +11,7 @@ const Home = () => {
     return (
         <div>
             <Banner/>
+            <ManufacturerProducts/>
             <BusinessSummery/>
             <NewArrivals/>
             <CategoriesShop/>
