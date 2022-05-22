@@ -8,7 +8,7 @@ import img6 from '../../assets/Car tools/bn3.jpg'
 
 const NewArrivals = () => {
     return (
-        <div className='py-10 mid-content'>
+        <div className='mid-content'>
             <h2 className='text-center text-primary  font-bold'>TOP NEW IN THE WEEK</h2>
             <h1 className='text-center text-3xl font-bold'>NEW ARRIVALS</h1>
             <div className='grid grid-cols-4 gap-5  pt-10'>
@@ -21,7 +21,7 @@ const NewArrivals = () => {
                         <div class="rating rating-sm">
                             <input type="radio" name="rating-9" class="rating-hidden" />
                             <input type="radio" name="rating-9" class="mask mask-star-2" />
-                            <input type="radio" name="rating-9" class="mask mask-star-2" checked />
+                            <input type="radio" name="rating-9" class="mask mask-star-2" />
                             <input type="radio" name="rating-9" class="mask mask-star-2" />
                             <input type="radio" name="rating-9" class="mask mask-star-2" />
                             <input type="radio" name="rating-9" class="mask mask-star-2" />
@@ -38,7 +38,7 @@ const NewArrivals = () => {
                         <div class="rating rating-sm">
                             <input type="radio" name="rating-9" class="rating-hidden" />
                             <input type="radio" name="rating-9" class="mask mask-star-2" />
-                            <input type="radio" name="rating-9" class="mask mask-star-2" checked />
+                            <input type="radio" name="rating-9" class="mask mask-star-2" />
                             <input type="radio" name="rating-9" class="mask mask-star-2" />
                             <input type="radio" name="rating-9" class="mask mask-star-2" />
                             <input type="radio" name="rating-9" class="mask mask-star-2" />
@@ -54,7 +54,7 @@ const NewArrivals = () => {
                         <h2 class="card-title">RENPUIS CONSUAT</h2>
                         <div class="rating rating-sm">
                             <input type="radio" name="rating-9" class="mask mask-star" />
-                            <input type="radio" name="rating-1" class="mask mask-star" checked />
+                            <input type="radio" name="rating-1" class="mask mask-star" />
                             <input type="radio" name="rating-1" class="mask mask-star" />
                             <input type="radio" name="rating-1" class="mask mask-star" />
                             <input type="radio" name="rating-1" class="mask mask-star" />
@@ -71,7 +71,7 @@ const NewArrivals = () => {
                         <div class="rating rating-sm">
                             <input type="radio" name="rating-9" class="rating-hidden" />
                             <input type="radio" name="rating-9" class="mask mask-star-2" />
-                            <input type="radio" name="rating-9" class="mask mask-star-2" checked />
+                            <input type="radio" name="rating-9" class="mask mask-star-2" />
                             <input type="radio" name="rating-9" class="mask mask-star-2" />
                             <input type="radio" name="rating-9" class="mask mask-star-2" />
                             <input type="radio" name="rating-9" class="mask mask-star-2" />
