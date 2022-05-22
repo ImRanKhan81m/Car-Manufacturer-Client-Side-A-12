@@ -81,7 +81,7 @@ const NewArrivals = () => {
                 </div>
             </div>
 
-            <div className='grid grid-cols-2 mt-20 w-full gap-10'>
+            <div className='grid lg:grid-cols-2 md:grid-cols-2 mt-20 w-full lg:gap-10 gap-5'>
                 <div>
                     <img className='w-full' src={img5} alt="" />
                 </div>

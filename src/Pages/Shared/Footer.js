@@ -7,7 +7,7 @@ const Footer = () => {
 
 
     return (
-        <div className='lg:pt-20 md:pt-10 sm:pt-5 pt-5 bg-secondary'>
+        <div className='lg:pt-20 md:pt-10 sm:pt-5 pt-5 bg-secondary border'>
             <div className=' mid-content grid lg:grid-cols-2 md:grid-cols-2 gap-5'>
                 <div>
                     <h1 className='font-bold text-2xl mb-5'>CONTACT US</h1>

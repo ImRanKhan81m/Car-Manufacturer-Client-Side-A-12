@@ -1,5 +1,4 @@
 import React from 'react';
-import Footer from '../Shared/Footer';
 import Banner from './Banner';
 import BusinessSummery from './BusinessSummery';
 import CategoriesShop from './CategoriesShop';
@@ -14,7 +13,6 @@ const Home = () => {
             <NewArrivals/>
             <CategoriesShop/>
             <ShopBrands/>
-            <Footer/>
         </div>
     );
 };
