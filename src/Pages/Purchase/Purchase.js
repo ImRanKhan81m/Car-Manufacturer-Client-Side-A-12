@@ -4,12 +4,12 @@ import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useParams } from 'react-router-dom';
 import auth from '../../firebase.init';
+import './Purchase.css'
 
 const Purchase = () => {
     const [product, setProduct] = useState({});
     const { manageId } = useParams();
     const [user] = useAuthState(auth);
-    console.log(product);
 
     useEffect(() => {
         const url = `http://localhost:5000/order/${manageId}`;
@@ -18,8 +18,26 @@ const Purchase = () => {
             .then(data => setProduct(data))
     }, [manageId]);
 
-    const handleSubmit= event =>{
-        event.preventDefault()
+    const handleDecrease = () => {
+        var quantityValue = parseInt(document.getElementById('quantity').value, 10);
+        quantityValue = isNaN(quantityValue) ? 0 : quantityValue;
+        if (quantityValue < 1) {
+            quantityValue = 1
+        }
+        quantityValue--;
+        document.getElementById('quantity').value = quantityValue;
+    }
+    const Increase = () => {
+        var quantityValue = parseInt(document.getElementById('quantity').value, 10);
+        quantityValue = isNaN(quantityValue) ? 0 : quantityValue;
+        quantityValue++;
+        document.getElementById('quantity').value = quantityValue;
+    }
+
+    const handleSubmit = event => {
+        event.preventDefault();
+        const value = parseInt(document.getElementById('quantity').value);
+        console.log(value);
     }
 
     return (
@@ -48,15 +66,26 @@ const Purchase = () => {
                                         <p className='mb-3'>
                                             {product.description}
                                         </p>
+                                        <p className='mb-3'><span className='font-bold'>In Stock : </span>
+                                            {product.quantity} Pcs
+                                        </p>
+                                        <p className='mb-3'><span className='font-bold'>Minimum Order: </span>
+                                            10 Pcs
+                                        </p>
                                         <p><span className='font-bold'>Price:</span> $ {product.price}</p>
-                                        <div className='mt-3'> <span className='font-bold mr-3'>Quantity:</span>
-                                        <button><FontAwesomeIcon icon={faMinusCircle} /></button><input maxLength="50" type="number" className='border mx-2 px-2 w-[100px]'/><button><FontAwesomeIcon icon={faPlusCircle} /></button>
+
+                                        <div className='mt-3'>
+                                            <span className='font-bold mr-3'>Quantity:</span>
+                                            <FontAwesomeIcon onClick={() => handleDecrease()} icon={faMinusCircle} />
+                                            <input id='quantity' name='number' type="number" className='border mx-2 px-2 w-[100px]' />
+                                            <FontAwesomeIcon onClick={() => Increase()} icon={faPlusCircle} />
                                         </div>
+
                                     </div>
                                 </div>
                             </div>
 
-                            <input type="submit" value="Submit" className="btn btn-primary bg-primary w-full my-5 " />
+                            <input type="submit" value="Confirm Order" className="btn btn-primary bg-primary w-full my-5 " />
                         </form>
                     </div>
                 </div>
