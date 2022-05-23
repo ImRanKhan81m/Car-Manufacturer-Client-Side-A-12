@@ -8,7 +8,7 @@ import img6 from '../../assets/Car tools/cate5-180x210.jpg'
 
 const CategoriesShop = () => {
     return (
-        <div className='bg-secondary my-20 py-16'>
+        <div className='bg-secondary lg:my-20 md:my-14 sm:my-10 my-5 py-16'>
             <p className='text-primary font-bold text-center'>TOP FEATURED COLLECTIONS</p>
             <h1 className='text-center font-bold text-3xl mb-10'>SHOP BY CATEGORIES</h1>
             <div className='grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 mid-content gap-5'>
