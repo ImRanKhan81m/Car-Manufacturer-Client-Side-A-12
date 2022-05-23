@@ -7,6 +7,7 @@ import MyProfile from "./Pages/MyProfile/MyProfile";
 import Review from "./Pages/Review/Review";
 import Navbar from "./Pages/Shared/Navbar";
 import SignUp from "./Pages/Authentication/Login/SignUp";
+import Purchase from "./Pages/Purchase/Purchase";
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         <Route path="/reviews" element={<Review/>}/>
         <Route path="/contact" element={<Contact/>}/>
         <Route path="/profile" element={<MyProfile/>}/>
+        <Route path="/order/:manageId" element={<Purchase/>}/>
         <Route path="/login" element={<Login/>}/>
         <Route path="/signup" element={<SignUp/>}/>
       </Routes>
