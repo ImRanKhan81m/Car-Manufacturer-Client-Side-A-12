@@ -19,9 +19,7 @@ const Purchase = () => {
             .then(data => setProduct(data))
     }, [manageId]);
 
-    
-    let currentPrice
-    console.log(currentPrice);
+
     const handleDecrease = () => {
         var quantityValue = parseInt(document.getElementById('quantity').value, 10);
         quantityValue = isNaN(quantityValue) ? 1 : quantityValue;
@@ -30,9 +28,6 @@ const Purchase = () => {
         }
         quantityValue--;
         document.getElementById('quantity').value = quantityValue;
-        let price = parseFloat(product.price);
-        currentPrice = quantityValue*price
-        
     }
 
     const Increase = () => {
@@ -48,10 +43,10 @@ const Purchase = () => {
         const value = parseInt(document.getElementById('quantity').value);
         if (value >= 10 && value <= stockProduct) {
             // console.log(product);
-        } 
-        else if(value < 10 ){
+        }
+        else if (value < 10) {
             toast.error('Sorry! You have to order at least 10 products.')
-        }else if(value > stockProduct){
+        } else if (value > stockProduct) {
             toast.error('Sorry! You cannot order more than the stock product.')
         }
     }
@@ -88,12 +83,12 @@ const Purchase = () => {
                                         <p className='mb-3'><span className='font-bold'>Minimum Order: </span>
                                             10 Pcs
                                         </p>
-                                        <p><span className='font-bold'>Price:</span> $ {currentPrice}</p>
+                                        <p><span className='font-bold'>Price:</span> $ {product.price}</p>
 
                                         <div className='mt-3 select-none'>
                                             <span className='font-bold mr-3'>Quantity:</span>
                                             <FontAwesomeIcon onClick={() => handleDecrease()} icon={faMinusCircle} />
-                                            <input defaultValue = "10" id='quantity' name='number' type="number" className='border mx-2 px-2 w-[100px]' />
+                                            <input defaultValue="10" id='quantity' name='number' type="number" className='border mx-2 px-2 w-[100px]' />
                                             <FontAwesomeIcon onClick={() => Increase()} icon={faPlusCircle} />
                                         </div>
                                     </div>
