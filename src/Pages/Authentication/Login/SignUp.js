@@ -1,10 +1,11 @@
 
 import auth from '../../../firebase.init';
 import { useCreateUserWithEmailAndPassword, useSignInWithGoogle, useUpdateProfile } from 'react-firebase-hooks/auth';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useForm } from "react-hook-form";
 import Loading from '../../Loading/Loading';
 import useToken from '../../../hooks/useToken';
+import { useEffect } from 'react';
 
 const SignUp = () => {
     const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
@@ -18,8 +19,15 @@ const SignUp = () => {
     ] = useCreateUserWithEmailAndPassword(auth);
     const [updateProfile, updating, updateError] = useUpdateProfile(auth);
     const [token] = useToken(user || gUser)
+    const location = useLocation();
+    const from = location.state?.from?.pathname || "/";
 
 
+    useEffect(() => {
+        if (token) {
+            navigate(from, { replace: true });
+        }
+    }, [token, navigate, from])
 
     if (loading || gLoading || updating) {
         return <Loading />
