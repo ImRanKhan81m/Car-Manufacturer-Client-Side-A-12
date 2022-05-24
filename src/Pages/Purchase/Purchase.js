@@ -51,17 +51,18 @@ const Purchase = () => {
         let currentPrice = parseInt(document.getElementById('quantity')?.value) * price;
 
         const orderProduct = {
-            customer: user.displayName,
-            customerEmail: user.email,
+            customer: user.email,
+            customerName: user.displayName,
             customerAddress: event.target.address.value,
             orderId: _id,
             product: toolName,
+            img: img,
             quantity: event.target.quantity.value,
             totalPrice: currentPrice
         }
 
         if (value >= 10 && value <= stockProduct) {
-            fetch('http://localhost:5000/add-order', {
+            fetch('http://localhost:5000/order', {
                 method: "POST",
                 headers: {
                     'content-type': 'application/json'
