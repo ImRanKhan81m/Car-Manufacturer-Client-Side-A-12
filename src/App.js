@@ -15,6 +15,7 @@ import Dashboard from "./Pages/Dashboard/Dashboard";
 import MyOrders from "./Pages/Dashboard/MyOrders";
 import AddReview from "./Pages/Dashboard/AddReview";
 import MakeAdmin from "./Pages/Dashboard/MakeAdmin";
+import RequireAdmin from "./Pages/Dashboard/RequireAdmin";
 
 
 function App() {
@@ -35,10 +36,10 @@ function App() {
         } />
 
         <Route path="dashboard" element={<RequireAuth><Dashboard /></RequireAuth>}>
-          <Route index element={<MyOrders/>}/>
-          <Route path="review" element={<AddReview/>}/>
-          <Route path="profile" element={<MyProfile/>}/>
-          <Route path="admin" element={<MakeAdmin/>}/>
+          <Route index element={<MyOrders />} />
+          <Route path="review" element={<AddReview />} />
+          <Route path="profile" element={<MyProfile />} />
+          <Route path="admin" element={<RequireAdmin><MakeAdmin /></RequireAdmin>} />
         </Route>
 
         <Route path="/login" element={<Login />} />
