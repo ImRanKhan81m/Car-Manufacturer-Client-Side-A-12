@@ -4,6 +4,7 @@ import ToolsProduct from './ToolsProduct';
 const ManufacturerProducts = () => {
     const [tools, setTools] = useState([]);
 
+
     useEffect(()=>{
         fetch('http://localhost:5000/tools')
         .then(res=>res.json())

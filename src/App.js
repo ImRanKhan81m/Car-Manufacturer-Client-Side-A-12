@@ -11,6 +11,9 @@ import Navbar from "./Pages/Shared/Navbar";
 import SignUp from "./Pages/Authentication/Login/SignUp";
 import Purchase from "./Pages/Purchase/Purchase";
 import RequireAuth from "./Pages/Authentication/Login/RequireAuth";
+import Dashboard from "./Pages/Dashboard/Dashboard";
+import MyOrders from "./Pages/Dashboard/MyOrders";
+import AddReview from "./Pages/Dashboard/AddReview";
 
 
 function App() {
@@ -29,6 +32,15 @@ function App() {
             <Purchase />
           </RequireAuth>
         } />
+        <Route path="dashboard" element={
+          <RequireAuth>
+            <Dashboard />
+          </RequireAuth>
+        }>
+          <Route index element={<MyOrders/>}/>
+          <Route path="review" element={<AddReview/>}/>
+          <Route path="profile" element={<MyProfile/>}/>
+        </Route>
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
       </Routes>

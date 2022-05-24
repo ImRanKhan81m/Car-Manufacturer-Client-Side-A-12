@@ -9,15 +9,18 @@ import './Purchase.css'
 
 const Purchase = () => {
     const [product, setProduct] = useState({});
+    const { price, toolName, _id, description, img, quantity } = product
     const { manageId } = useParams();
     const [user] = useAuthState(auth);
+    const [isReload, setIsReload] = useState(false);
+
+
 
     useEffect(() => {
-        const url = `http://localhost:5000/order/${manageId}`;
-        fetch(url)
+        fetch(`http://localhost:5000/order/${manageId}`)
             .then(res => res.json())
             .then(data => setProduct(data))
-    }, [manageId]);
+    }, [manageId, isReload]);
 
 
     const handleDecrease = () => {
@@ -38,12 +41,39 @@ const Purchase = () => {
     }
     var stockProduct = product.quantity;
 
+
+
+
+
     const handleSubmit = event => {
         event.preventDefault();
-        const value = parseInt(document.getElementById('quantity').value);
-        if (value >= 10 && value <= stockProduct) {
-            // console.log(product);
+        const value = parseInt(event.target.quantity.value);
+        let currentPrice = parseInt(document.getElementById('quantity')?.value) * price;
+
+        const orderProduct = {
+            customer: user.displayName,
+            customerEmail: user.email,
+            customerAddress: event.target.address.value,
+            orderId: _id,
+            product: toolName,
+            quantity: event.target.quantity.value,
+            totalPrice: currentPrice
         }
+
+        if (value >= 10 && value <= stockProduct) {
+            fetch('http://localhost:5000/add-order', {
+                method: "POST",
+                headers: {
+                    'content-type': 'application/json'
+                },
+                body: JSON.stringify(orderProduct)
+            })
+                .then(res => res.json())
+                .then(data => {
+                    toast('Your Order is Confirmed.')
+                })
+        }
+
         else if (value < 10) {
             toast.error('Sorry! You have to order at least 10 products.')
         } else if (value > stockProduct) {
@@ -63,32 +93,34 @@ const Purchase = () => {
                                 <input type="text" name='name' disabled value={user?.displayName} className="input input-bordered w-full my-2 focus:outline-none" />
 
                                 <input type="email" name='email' disabled value={user?.email} className="input input-bordered w-full my-2 focus:outline-none" />
+
+                                <textarea name='address' class="textarea textarea-bordered w-full" placeholder="Your Address"></textarea>
                             </div>
 
-                            <div className='mt-20 '>
+                            <div className='mt-10 '>
                                 <h1 className='font-bold text-2xl mb-5'>Confirm Purchase :</h1>
 
                                 <div className='grid grid-cols-2 mb-5 border p-5'>
                                     <div className='flex justify-start items-center'>
-                                        <img className='w-[50%]' src={product.img} alt="" />
+                                        <img className='w-[50%]' src={img} alt="" />
                                     </div>
                                     <div>
                                         <h1 className='font-bold text-xl mb-3'>{product.toolName}</h1>
                                         <p className='mb-3'>
-                                            {product.description}
+                                            {description}
                                         </p>
                                         <p className='mb-3'><span className='font-bold'>In Stock : </span>
-                                            {product.quantity} Pcs
+                                            {quantity} Pcs
                                         </p>
                                         <p className='mb-3'><span className='font-bold'>Minimum Order: </span>
                                             10 Pcs
                                         </p>
-                                        <p><span className='font-bold'>Price:</span> $ {product.price}</p>
+                                        <p><span className='font-bold'>Price:</span> $ {price}</p>
 
                                         <div className='mt-3 select-none'>
                                             <span className='font-bold mr-3'>Quantity:</span>
                                             <FontAwesomeIcon onClick={() => handleDecrease()} icon={faMinusCircle} />
-                                            <input defaultValue="10" id='quantity' name='number' type="number" className='border mx-2 px-2 w-[100px]' />
+                                            <input defaultValue="10" id='quantity' name='quantity' type="number" className='border mx-2 px-2 w-[100px]' />
                                             <FontAwesomeIcon onClick={() => Increase()} icon={faPlusCircle} />
                                         </div>
                                     </div>

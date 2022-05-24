@@ -17,7 +17,9 @@ const Navbar = () => {
         {/* <li><NavLink to="/about">About</NavLink></li> */}
         <li><NavLink to="/reviews">Review</NavLink></li>
         <li><NavLink to="/contact">Contact</NavLink></li>
-        <li><NavLink to="/profile">MyProfile</NavLink></li>
+        {
+            user && <li><NavLink to="/profile">MyProfile</NavLink></li>
+        }
         {
             user && <li><NavLink to="/dashboard">Dashboard</NavLink></li>
         }
@@ -26,7 +28,7 @@ const Navbar = () => {
     </>
 
     return (
-        <header className='sticky top-0 z-10 py-1 bg-secondary shadow-sm lg:px-1 md:px-0 sm:px-0 px-0'>
+        <header className='sticky top-0 z-10 py-1 bg-secondary shadow-sm lg:px-1 md:px-0 sm:px-0 px-0 z-50'>
             <div style={{maxWidth:'1440px', margin:'auto'}} className="navbar lg:mid-content">
                 <div className="navbar-start">
                     <div className="dropdown">
