@@ -1,6 +1,8 @@
+import { faCartArrowDown, faMagnifyingGlass, faUser } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { Link, Outlet } from 'react-router-dom';
+import { NavLink, Outlet } from 'react-router-dom';
 import auth from '../../firebase.init';
 import useAdmin from '../../hooks/useAdmin';
 
@@ -19,14 +21,21 @@ const Dashboard = () => {
                     {/* <!-- Sidebar content here --> */}
 
                     {admin ?
-                        <> <li><Link to={'/dashboard/admin'}>Make Admin</Link></li>
-                            <li><Link to={'/dashboard/manageOrder'}>Manage Orders</Link></li>
-                            <li><Link to={'/dashboard/manageProducts'}>Manage Products</Link></li>
-                            <li><Link to={'/dashboard/addProducts'}>Add Product</Link></li>
-                            <li className='mb-2'><Link to={'/dashboard/profile'}>My Profile</Link></li>
-                        </> : <><li className='mb-2'><Link to={'/dashboard/orders'}>My Orders</Link></li>
-                            <li className='mb-2'><Link to={'/dashboard/review'}>Add a Review</Link></li>
-                            <li className='mb-2'><Link to={'/dashboard/profile'}>My Profile</Link></li></>}
+                        <>
+                            <li className='mb-2'><NavLink to={'/dashboard'}>My Profile</NavLink></li>
+                            <li className='mb-2'><NavLink to={'/dashboard/admin'}>Make Admin</NavLink></li>
+                            <li className='mb-2'><NavLink to={'/dashboard/manageOrder'}>Manage Orders</NavLink></li>
+                            <li className='mb-2'><NavLink to={'/dashboard/manageProducts'}>Manage Products</NavLink></li>
+                            <li className='mb-2'><NavLink to={'/dashboard/addProducts'}>Add Product</NavLink></li>
+
+
+                        </> :
+                        <>
+                            <li className='mb-2'><NavLink to={'/dashboard'}> <FontAwesomeIcon icon={faUser} /> My Profile</NavLink></li>
+                            <li className='mb-2'><NavLink to={'/dashboard/orders'}><FontAwesomeIcon icon={faCartArrowDown} /> My Orders</NavLink></li>
+                            <li className='mb-2'><NavLink to={'/dashboard/review'}><FontAwesomeIcon icon={faMagnifyingGlass} /> Add a Review</NavLink></li>
+
+                        </>}
                 </ul>
             </div>
         </div>
