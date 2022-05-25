@@ -1,6 +1,7 @@
 import React from 'react';
 import { useQuery } from 'react-query';
 import Loading from '../../Loading/Loading';
+import ManageProductRows from './ManageProductRows';
 
 const ManageProducts = () => {
 
@@ -27,27 +28,19 @@ const ManageProducts = () => {
                             <th>Name</th>
                             <th>Image</th>
                             <th>Quantity</th>
-                            <th>Total Price</th>
-                            <th>TRXN ID</th>
-                            <th>Payment</th>
+                            <th>Price</th>
+                            <th>Updated</th>
+                            <th>Delete</th>
                         </tr>
                     </thead>
                     <tbody>
                         {
-                            orders?.map((order, index) => <tr>
-                                <th>{++index}</th>
-                                <th>{order.toolName}</th>
-                                <td>
-                                    <div className="avatar flex items-center ">
-                                        <div className="w-16 rounded-xl">
-                                            <img style={{ width: '100%' }} src={order.img} alt='' />
-                                        </div>
-                                    </div></td>
-                                <td> {order.quantity} Pcs</td>
-                                <td>{order.totalPrice} $</td>
-                                <td>Canada</td>
-                                <td>12/16/2020</td>
-                            </tr>)
+                            orders?.map((order, index) => <ManageProductRows
+                            key={order._id}
+                            index={index}
+                            order={order}
+                            refetch={refetch}
+                            ></ManageProductRows>)
                         }
 
                     </tbody>
