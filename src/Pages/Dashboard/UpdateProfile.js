@@ -1,6 +1,8 @@
-import React from 'react';
+import { signOut } from 'firebase/auth';
+import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
+import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
 
@@ -10,8 +12,6 @@ const UpdateProfile = () => {
     const { register, formState: { errors }, handleSubmit, reset } = useForm();
 
     const imgStorageKey = 'a7ae0492c3659f35e2c0af7203e883ca'
-
-
     const onSubmit = async data => {
 
         const image = data.img[0];

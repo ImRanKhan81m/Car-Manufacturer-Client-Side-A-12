@@ -5,8 +5,8 @@ import { useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 
 const MyOrders = () => {
-    const [orders, setOrders] = useState([]);
     const [user] = useAuthState(auth);
+    const [orders, setOrders] = useState([]);
     const navigate = useNavigate()
 
     useEffect(() => {
