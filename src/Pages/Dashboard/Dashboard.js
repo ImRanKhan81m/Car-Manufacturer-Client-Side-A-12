@@ -33,8 +33,7 @@ const Dashboard = () => {
                         <>
                             <li className='mb-2'><NavLink to={'/dashboard'}> <FontAwesomeIcon icon={faUser} /> My Profile</NavLink></li>
                             <li className='mb-2'><NavLink to={'/dashboard/orders'}><FontAwesomeIcon icon={faCartArrowDown} /> My Orders</NavLink></li>
-                            <li className='mb-2'><NavLink to={'/dashboard/review'}><FontAwesomeIcon icon={faMagnifyingGlass} /> Add a Review</NavLink></li>
-
+                            <li className='mb-2'><NavLink to={'/dashboard/addReview'}><FontAwesomeIcon icon={faMagnifyingGlass} /> Add a Review</NavLink></li>
                         </>}
                 </ul>
             </div>

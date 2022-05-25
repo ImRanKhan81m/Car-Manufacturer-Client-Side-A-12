@@ -51,7 +51,7 @@ const AddProducts = () => {
 
     return (
         <div className='py-10 '>
-            <h1 className='text-center font-bold text-3xl'>Add a product </h1>
+            <h1 className='text-center font-bold text-3xl'>Add a Product </h1>
             <form className='w-3/4 mx-auto' onSubmit={handleSubmit(onSubmit)} >
 
                 <div className="form-control">
