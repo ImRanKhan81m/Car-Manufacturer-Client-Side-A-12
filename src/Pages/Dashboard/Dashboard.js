@@ -1,4 +1,4 @@
-import { faCartArrowDown, faMagnifyingGlass, faUser } from '@fortawesome/free-solid-svg-icons';
+import { faCalendarPlus, faCartArrowDown, faListCheck, faMagnifyingGlass, faUser, faUserCheck } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
@@ -12,21 +12,21 @@ const Dashboard = () => {
     return (
         <div class="drawer drawer-mobile mid-content">
             <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
-            <div class="drawer-content ">
+            <div class="drawer-content pl-3">
                 <Outlet />
             </div>
-            <div class="drawer-side  h-[100vh] mt-10">
+            <div class="drawer-side  h-[100vh] ">
                 <label for="my-drawer-2" class="drawer-overlay"></label>
-                <ul class="menu p-4 overflow-y-auto w-48 bg-base-100 text-base-content ">
+                <ul class="menu p-4 overflow-y-auto w-54  bg-secondary text-base-content py-10">
                     {/* <!-- Sidebar content here --> */}
 
                     {admin ?
                         <>
-                            <li className='mb-2'><NavLink to={'/dashboard'}>My Profile</NavLink></li>
-                            <li className='mb-2'><NavLink to={'/dashboard/admin'}>Make Admin</NavLink></li>
-                            <li className='mb-2'><NavLink to={'/dashboard/manageOrder'}>Manage Orders</NavLink></li>
-                            <li className='mb-2'><NavLink to={'/dashboard/manageProducts'}>Manage Products</NavLink></li>
-                            <li className='mb-2'><NavLink to={'/dashboard/addProducts'}>Add Product</NavLink></li>
+                            <li className='mb-2'><NavLink to={'/dashboard'}><FontAwesomeIcon icon={faUser} /> My Profile</NavLink></li>
+                            <li className='mb-2'><NavLink to={'/dashboard/admin'}><FontAwesomeIcon icon={faUserCheck} /> Make Admin</NavLink></li>
+                            <li className='mb-2'><NavLink to={'/dashboard/manageOrder'}><FontAwesomeIcon icon={faListCheck} /> Manage Orders</NavLink></li>
+                            <li className='mb-2'><NavLink to={'/dashboard/manageProducts'}><FontAwesomeIcon icon={faListCheck} /> Manage Products</NavLink></li>
+                            <li className='mb-2'><NavLink to={'/dashboard/addProducts'}><FontAwesomeIcon icon={faCalendarPlus} /> Add Product</NavLink></li>
 
 
                         </> :
