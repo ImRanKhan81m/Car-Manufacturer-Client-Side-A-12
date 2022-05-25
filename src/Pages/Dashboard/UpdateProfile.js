@@ -1,8 +1,6 @@
-import { signOut } from 'firebase/auth';
-import React, { useEffect, useState } from 'react';
+
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
-import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
 
@@ -47,7 +45,8 @@ const UpdateProfile = () => {
                     })
                         .then(res => res.json())
                         .then(data => {
-                            console.log('data inside useToken', data);
+                            toast.success('Profile Updated Successfully.')
+                            reset()
                         })
                 }
             })
