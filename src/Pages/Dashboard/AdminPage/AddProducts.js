@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form';
 import { toast } from 'react-toastify';
 
 const AddProducts = () => {
-    const { register, formState: { errors }, handleSubmit, reset  } = useForm();
+    const { register, formState: { errors }, handleSubmit, reset } = useForm();
 
     const imgStorageKey = 'a7ae0492c3659f35e2c0af7203e883ca'
 
@@ -104,7 +104,7 @@ const AddProducts = () => {
                         min="0"
                         placeholder="Enter Product Price"
                         className="input input-bordered focus:outline-none"
-                        {...register("price", {
+                        {...register("education", {
                             required: {
                                 value: true,
                                 message: 'Price is Required'

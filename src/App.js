@@ -19,6 +19,7 @@ import RequireAdmin from "./Pages/Dashboard/RequireAdmin";
 import ManageOrders from "./Pages/Dashboard/AdminPage/ManageOrders";
 import ManageProducts from "./Pages/Dashboard/AdminPage/ManageProducts";
 import AddProducts from "./Pages/Dashboard/AdminPage/AddProducts";
+import UpdateProfile from "./Pages/Dashboard/UpdateProfile";
 
 
 function App() {
@@ -39,7 +40,7 @@ function App() {
         } />
 
         <Route path="dashboard" element={<RequireAuth><Dashboard /></RequireAuth>}>
-        <Route index element={<MyProfile />} />
+        <Route index element={<UpdateProfile />} />
           <Route path="orders" element={<MyOrders />} />
           <Route path="addReview" element={<AddReview />} />
           <Route path="manageOrder" element={<ManageOrders />} />
