@@ -5,7 +5,7 @@ import Loading from '../../Loading/Loading';
 const ManageOrders = () => {
 
     const { data: orders, isLoading, refetch } = useQuery('users', () =>
-        fetch('http://localhost:5000/order', {
+        fetch('http://localhost:5000/orders', {
             method: 'GET',
             headers: {
                 'authorization': `Bearer ${localStorage.getItem('accessToken')}`
