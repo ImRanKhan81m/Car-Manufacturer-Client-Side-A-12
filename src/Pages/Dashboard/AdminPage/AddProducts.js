@@ -1,12 +1,52 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import { toast } from 'react-toastify';
 
 const AddProducts = () => {
-    const { register, formState: { errors }, handleSubmit } = useForm();
+    const { register, formState: { errors }, handleSubmit, reset  } = useForm();
+
+    const imgStorageKey = 'a7ae0492c3659f35e2c0af7203e883ca'
+
 
     const onSubmit = async data => {
-        console.log(data);
-
+        const image = data.img[0];
+        const formData = new FormData();
+        formData.append('image', image)
+        const url = `https://api.imgbb.com/1/upload?key=${imgStorageKey}`
+        fetch(url, {
+            method: 'POST',
+            body: formData
+        })
+            .then(res => res.json())
+            .then(result => {
+                if (result.success) {
+                    const img = result.data.url;
+                    const tools = {
+                        toolName: data.toolName,
+                        description: data.description,
+                        price: data.price,
+                        quantity: data.quantity,
+                        img: img
+                    }
+                    fetch('http://localhost:5000/add-tools', {
+                        method: 'POST',
+                        headers: {
+                            'content-type': 'application/json',
+                            authorization: `Bearer ${localStorage.getItem('accessToken')}`
+                        },
+                        body: JSON.stringify(tools)
+                    })
+                        .then(res => res.json())
+                        .then(inserted => {
+                            if (inserted.insertedId) {
+                                toast.success('Product added successfully')
+                                reset()
+                            } else {
+                                toast.error('Failed to the add Product')
+                            }
+                        })
+                }
+            })
     }
 
     return (
