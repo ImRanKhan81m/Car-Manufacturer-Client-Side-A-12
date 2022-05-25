@@ -11,16 +11,22 @@ const Dashboard = () => {
         <div class="drawer drawer-mobile mid-content">
             <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
             <div class="drawer-content ">
-                <Outlet/>
+                <Outlet />
             </div>
             <div class="drawer-side  h-[100vh] ">
                 <label for="my-drawer-2" class="drawer-overlay"></label>
                 <ul class="menu p-4 overflow-y-auto w-48 bg-base-100 text-base-content ">
                     {/* <!-- Sidebar content here --> */}
-                    <li className='mb-2'><Link to={'/dashboard'}>My Orders</Link></li>
-                    <li className='mb-2'><Link to={'/dashboard/review'}>Add a Review</Link></li>
-                    <li className='mb-2'><Link to={'/dashboard/profile'}>My Profile</Link></li>
-                    {admin && <li><Link to={'/dashboard/admin'}>Make Admin</Link></li>}
+
+                    {admin ?
+                        <> <li><Link to={'/dashboard/admin'}>Make Admin</Link></li>
+                            <li><Link to={'/dashboard/manageOrder'}>Manage Orders</Link></li>
+                            <li><Link to={'/dashboard/manageProducts'}>Manage Products</Link></li>
+                            <li><Link to={'/dashboard/addProducts'}>Add Product</Link></li>
+                            <li className='mb-2'><Link to={'/dashboard/profile'}>My Profile</Link></li>
+                        </> : <><li className='mb-2'><Link to={'/dashboard/orders'}>My Orders</Link></li>
+                            <li className='mb-2'><Link to={'/dashboard/review'}>Add a Review</Link></li>
+                            <li className='mb-2'><Link to={'/dashboard/profile'}>My Profile</Link></li></>}
                 </ul>
             </div>
         </div>
