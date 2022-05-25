@@ -44,8 +44,8 @@ function App() {
           <Route path="review" element={<AddReview />} />
           <Route path="manageOrder" element={<ManageOrders />} />
           <Route path="manageProducts" element={<ManageProducts />} />
-          <Route path="addProducts" element={<AddProducts />} />
           <Route path="admin" element={<RequireAdmin><MakeAdmin /></RequireAdmin>} />
+          <Route path="addProducts" element={<RequireAdmin><AddProducts /></RequireAdmin>} />
         </Route>
 
         <Route path="/login" element={<Login />} />
