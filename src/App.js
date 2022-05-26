@@ -21,6 +21,7 @@ import ManageProducts from "./Pages/Dashboard/AdminPage/ManageProducts";
 import AddProducts from "./Pages/Dashboard/AdminPage/AddProducts";
 import UpdateProfile from "./Pages/Dashboard/UpdateProfile";
 import Payment from "./Pages/Dashboard/Payment";
+import NotFoundPage from "./Pages/NotFoundPage/NotFoundPage";
 
 
 function App() {
@@ -53,6 +54,8 @@ function App() {
 
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
+
+        <Route path='found' element={<NotFoundPage />} />
       </Routes>
       <ToastContainer />
     </div>
