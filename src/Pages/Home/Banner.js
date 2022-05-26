@@ -6,8 +6,8 @@ const Banner = () => {
             <div className="hero-overlay bg-opacity-40 bg-black"></div>
             <div className="hero-content text-center text-white">
                 <div className="max-w-md">
-                    <h1 className="mb-5 text-5xl font-bold">Hello There</h1>
-                    <p className="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+                    <h1 className="mb-5 text-5xl font-bold">Make Your Car Last Longer</h1>
+                    <p className="mb-5">Find here Automotive Tools, Automobile Tools manufacturers, suppliers & exporters in India. Get contact details & address of companies manufacturing and ...</p>
                     <button className="btn btn-primary">Get Started</button>
                 </div>
             </div>
