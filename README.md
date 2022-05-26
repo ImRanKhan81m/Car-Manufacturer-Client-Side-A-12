@@ -8,6 +8,7 @@ Live site :(https://cartools-menufacturer.web.app/)
 * This project used React Routing.
 * This project used Nested Route for Dashboard.
 * This project used React Query for load data in api.
+* This project used React hook Form for input user data.
 * This project used Tailwind CSS.
 * This project has Multiple page.
 * This project used React Firebase hooks for Authentication.

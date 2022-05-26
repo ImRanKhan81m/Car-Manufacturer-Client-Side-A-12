@@ -16,7 +16,13 @@ const ManageOrderRow = ({ order, index }) => {
             <td>{order.totalPrice} $</td>
             <td>
                 {
-                    order.paid ? <button className='btn btn-sm btn-success'>Paid</button> : <button className='btn btn-sm btn-error'>UnPAID</button>
+                    order.paid ? <button className='btn btn-xs btn-success'>Paid</button> : <button className='btn btn-xs btn-error'>UnPAID</button>
+                }
+            </td>
+
+            <td>
+                {
+                    order.paid ? <button className='btn btn-xs btn-success'>Shipped</button> : <button className='btn btn-xs btn-error'>pending</button>
                 }
             </td>
         </tr>
