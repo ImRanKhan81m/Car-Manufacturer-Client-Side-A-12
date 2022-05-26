@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
+import MyOrdersRow from './MyOrdersRow';
 
 const MyOrders = () => {
     const [user] = useAuthState(auth);
@@ -44,31 +45,15 @@ const MyOrders = () => {
                             <th>Image</th>
                             <th>Quantity</th>
                             <th>Total Price</th>
-                            <th>TRXN ID</th>
                             <th>Payment</th>
                         </tr>
                     </thead>
                     <tbody>
                         {
-                            orders?.map((order, index) => <tr>
-                                <th>{++index}</th>
-                                <th>{order.product}</th>
-                                <td>
-                                    <div className="avatar flex items-center ">
-                                        <div className="w-16 rounded-xl">
-                                            <img style={{ width: '100%' }} src={order.img} alt='' />
-                                        </div>
-                                    </div></td>
-                                <td> {order.quantity} Pcs</td>
-                                <td>{order.totalPrice} $</td>
-
-                                <td>{(order.totalPrice && order.transactionId) && <p><span className='text-success font-bold'>{order.transactionId}</span></p>} </td>
-
-                                {(order.totalPrice && !order.paid) && <td> <Link to={`/dashboard/payment/${order._id}`}><button className='btn btn-sm btn-success'>Pay Now</button></Link> </td>}
-
-                            
-                                <td>{(order.totalPrice && order.paid) && <button className='btn btn-sm btn-success'>Paid </button>}  </td>
-                            </tr>)
+                            orders?.map((order, index) => <MyOrdersRow
+                            order={order}
+                            index={index}
+                            ></MyOrdersRow>)
                         }
 
                     </tbody>

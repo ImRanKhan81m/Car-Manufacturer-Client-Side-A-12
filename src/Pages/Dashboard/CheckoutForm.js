@@ -1,6 +1,7 @@
 import { async } from '@firebase/util';
 import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js';
 import React, { useEffect, useState } from 'react';
+import { toast } from 'react-toastify';
 
 const CheckoutForm = ({ product }) => {
     const stripe = useStripe();
@@ -8,6 +9,7 @@ const CheckoutForm = ({ product }) => {
     const [cardError, setCardError] = useState('');
     const [clientSecret, setClientSecret] = useState('');
     const [success, setSuccess] = useState('');
+    const [processing, setProcessing] = useState(false);
     const [transactionId, setTransactionId] = useState('');
     const {_id, totalPrice, customer, customerName } = product
 
@@ -46,6 +48,7 @@ const CheckoutForm = ({ product }) => {
 
         setCardError(error?.message || '')
         setSuccess('');
+        setProcessing(true)
         const { paymentIntent, error: intentError } = await stripe.confirmCardPayment(
             clientSecret,
             {
@@ -60,11 +63,13 @@ const CheckoutForm = ({ product }) => {
         );
         if (intentError) {
             setCardError(intentError?.message);
+            setProcessing(false)
         } else {
             setCardError('')
             setTransactionId(paymentIntent.id)
             console.log(paymentIntent);
             setSuccess('Congrats! Your payment is completed.')
+            toast.success('Congrats! Your payment is completed.')
 
             const payment = {
                 orderProduct: _id,
@@ -82,6 +87,7 @@ const CheckoutForm = ({ product }) => {
             })
                 .then(res => res.json())
                 .then(data => {
+                    setProcessing(false)
                     console.log(data);
                 })
         }
@@ -107,7 +113,7 @@ const CheckoutForm = ({ product }) => {
                         },
                     }}
                 />
-                <button className='btn btn-success btn-sm mt-5' type="submit" disabled={!stripe}>
+                <button className='btn btn-success btn-sm mt-5' type="submit" disabled={!stripe || !clientSecret || success}>
                     Pay
                 </button>
             </form>
@@ -117,7 +123,6 @@ const CheckoutForm = ({ product }) => {
             }
             {
                 success && <div className='text-green-500'>
-                    <p>{success}</p>
                     <p>Your Transaction Id : <span className='text-orange-500 font-bold'>{transactionId}</span></p>
                 </div>
             }
