@@ -5,13 +5,13 @@ import Footer from '../Shared/Footer';
 const Contact = () => {
     return (
         <div>
-            <div className="hero h-[80vh] ">
-                <div className="hero-content grid grid-cols-2 gap-10">
+            <div className="hero lg:my-20 ">
+                <div className="hero-content grid lg:grid-cols-2 gap-10">
                     <div className="text-center lg:text-left">
 
                         <img src={img} alt="" />
                     </div>
-                    <div className="card flex-shrink-0 w-full shadow-2xl border">
+                    <div className="card flex-shrink-0 w-full shadow-2xl border mb-5">
                         <div className="card-body">
                             <div className="form-control">
                                 <label className="label">
