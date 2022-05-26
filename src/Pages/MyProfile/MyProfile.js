@@ -35,7 +35,7 @@ const MyProfile = () => {
                         <div className=' p-10 shadow-lg bg-white rounded-3xl'>
                             <h2 className='font-bold text-3xl mb-3'>About Me</h2>
                             <p>I'm A Front End Web Developer Who Is Passionate About Making Error-Free Websites With 100% Client Satisfaction. I Have A Passion For Learning And Sharing My Knowledge With Others As Publicly As Possible. I Love To Solve Real-World Problems.I Enjoy Working With Include ReactJS And JavaScript.</p>
-                            <div className='mt-10 grid grid-cols-2'>
+                            <div className='mt-10 grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-2'>
                                 <div>
                                     <h2><span className='text-warning'>Age:</span> 21</h2>
                                     <h2><span className='text-warning'>Gender:</span> Male</h2>
