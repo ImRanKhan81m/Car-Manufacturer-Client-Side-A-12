@@ -2,7 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const MyOrdersRow = ({ order, index }) => {
+const MyOrdersRow = ({ order, index, setDeleteOrder }) => {
     return (
         <tr>
             <th>{++index}</th>
@@ -19,8 +19,8 @@ const MyOrdersRow = ({ order, index }) => {
             {(order.totalPrice && !order.paid) &&
                 <td>
                     <>
-                        <Link to={`/dashboard/payment/${order._id}`}><button className='btn btn-sm btn-success mb-2'>Pay Now</button></Link> <br />
-                        <button className='btn btn-xs btn-error'>Cancel Order</button>
+                        <Link to={`/dashboard/payment/${order._id}`}><button className='btn btn-sm btn-success mb-1'>Pay Now</button></Link> <br />
+                        <label onClick={()=>setDeleteOrder(order)} for="deleteOrderModal" class="btn btn-error btn-xs">Cancel Order</label>
                     </>
                 </td>}
 
