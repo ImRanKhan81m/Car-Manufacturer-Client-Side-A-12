@@ -17,7 +17,7 @@ const ManufacturerProducts = () => {
             <p className='text-center text-primary font-bold'>TOP SALE IN THE WEEK</p>
             <h1 className='text-center font-bold text-3xl mb-10'>BEST SELLER TOOLS</h1>
 
-            <div className='mid-content grid grid-cols-3 gap-5 '>
+            <div className='mid-content grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 gap-5 '>
                 {
                     tools.map(tool => <ToolsProduct
                         key={tool._id}
