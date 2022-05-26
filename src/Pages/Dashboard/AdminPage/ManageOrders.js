@@ -29,7 +29,6 @@ const ManageOrders = () => {
                             <th>Image</th>
                             <th>Quantity</th>
                             <th>Total Price</th>
-                            <th>TRXN ID</th>
                             <th>Payment</th>
                         </tr>
                     </thead>

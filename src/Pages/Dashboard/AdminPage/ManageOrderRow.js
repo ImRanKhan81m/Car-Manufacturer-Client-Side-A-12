@@ -1,6 +1,7 @@
 import React from 'react';
 
-const ManageOrderRow = ({order, index}) => {
+const ManageOrderRow = ({ order, index }) => {
+    console.log(order.paid);
     return (
         <tr>
             <th>{++index}</th>
@@ -13,8 +14,11 @@ const ManageOrderRow = ({order, index}) => {
                 </div></td>
             <td> {order.quantity} Pcs</td>
             <td>{order.totalPrice} $</td>
-            <td>Canada</td>
-            <td>12/16/2020</td>
+            <td>
+                {
+                    order.paid ? <button className='btn btn-sm btn-success'>Paid</button> : <button className='btn btn-sm btn-error'>UnPAID</button>
+                }
+            </td>
         </tr>
     );
 };
