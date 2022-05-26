@@ -22,7 +22,6 @@ const MyOrders = () => {
     if (isLoading) {
         return <Loading />
     }
-    console.log(deleteOrder);
 
 
     return (

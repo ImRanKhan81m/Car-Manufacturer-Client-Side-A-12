@@ -11,7 +11,7 @@ const CheckoutForm = ({ product }) => {
     const [success, setSuccess] = useState('');
     const [processing, setProcessing] = useState(false);
     const [transactionId, setTransactionId] = useState('');
-    const {_id, totalPrice, customer, customerName } = product
+    const { _id, totalPrice, customer, customerName } = product
 
     useEffect(() => {
         fetch('http://localhost:5000/create-payment-intent', {
@@ -91,7 +91,7 @@ const CheckoutForm = ({ product }) => {
                     console.log(data);
                 })
         }
- 
+
 
     }
     return (
@@ -113,8 +113,8 @@ const CheckoutForm = ({ product }) => {
                         },
                     }}
                 />
-                <button className='btn btn-success btn-sm mt-5' type="submit" disabled={!stripe || !clientSecret || success}>
-                    Pay
+                <button className='btn btn-success btn-sm mt-10' type="submit" disabled={!stripe || !clientSecret || success}>
+                    Confirm Payment
                 </button>
             </form>
 
