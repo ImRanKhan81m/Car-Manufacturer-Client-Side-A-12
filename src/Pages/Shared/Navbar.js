@@ -22,11 +22,12 @@ const Navbar = () => {
         <li><NavLink to="/reviews">Review</NavLink></li>
         <li><NavLink to="/contact">Contact</NavLink></li>
         {
-            user && <li><NavLink to="/profile">MyProfile</NavLink></li>
-        }
-        {
             user && <li><NavLink to="/dashboard">Dashboard</NavLink></li>
         }
+        {
+            user && <li><NavLink to="/profile">MyProfile</NavLink></li>
+        }
+        
         <li>{user ? <NavLink onClick={logout} to="/login">SignOut</NavLink> : <NavLink to="/login">Login</NavLink>}</li>
 
     </>

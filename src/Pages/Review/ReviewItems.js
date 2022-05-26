@@ -11,15 +11,15 @@ const ReviewItems = ({ review }) => {
                 <div className='ml-3'>
                     <h1 className='lg:text-2xl md:text-xl sm:text-3xl text-xl font-bold'>{name}</h1>
                     <h6>
-                        {rating === 1 && <span><FontAwesomeIcon className='rating-star text-neutral' icon={faStar} /></span>}
+                        {rating === 1 && <span><FontAwesomeIcon className='rating-star ' icon={faStar} /></span>}
 
-                        {rating === 2 && <span><FontAwesomeIcon className='rating-star text-neutral' icon={faStar} /><FontAwesomeIcon className='rating-star text-neutral' icon={faStar} /></span>}
+                        {rating === 2 && <span><FontAwesomeIcon className='rating-star ' icon={faStar} /><FontAwesomeIcon className='rating-star ' icon={faStar} /></span>}
 
-                        {rating === 3 && <span><FontAwesomeIcon className='rating-star text-neutral' icon={faStar} /><FontAwesomeIcon className='rating-star text-neutral' icon={faStar} /><FontAwesomeIcon className='rating-star text-neutral' icon={faStar} /></span>}
+                        {rating === 3 && <span><FontAwesomeIcon className='rating-star ' icon={faStar} /><FontAwesomeIcon className='rating-star ' icon={faStar} /><FontAwesomeIcon className='rating-star ' icon={faStar} /></span>}
 
-                        {rating === 4 && <span><FontAwesomeIcon className='rating-star text-neutral' icon={faStar} /><FontAwesomeIcon className='rating-star text-neutral' icon={faStar} /><FontAwesomeIcon className='rating-star text-neutral' icon={faStar} /><FontAwesomeIcon className='rating-star text-neutral' icon={faStar} /></span>}
+                        {rating === 4 && <span><FontAwesomeIcon className='rating-star ' icon={faStar} /><FontAwesomeIcon className='rating-star ' icon={faStar} /><FontAwesomeIcon className='rating-star ' icon={faStar} /><FontAwesomeIcon className='rating-star ' icon={faStar} /></span>}
 
-                        {rating >= 5 && <span><FontAwesomeIcon className='rating-star text-neutral' icon={faStar} /><FontAwesomeIcon className='rating-star text-neutral' icon={faStar} /><FontAwesomeIcon className='rating-star text-neutral' icon={faStar} /><FontAwesomeIcon className='rating-star text-neutral' icon={faStar} /><FontAwesomeIcon className='rating-star text-neutral' icon={faStar} /></span>}
+                        {rating >= 5 && <span><FontAwesomeIcon className='rating-star ' icon={faStar} /><FontAwesomeIcon className='rating-star ' icon={faStar} /><FontAwesomeIcon className='rating-star' icon={faStar} /><FontAwesomeIcon className='rating-star' icon={faStar} /><FontAwesomeIcon className='rating-star' icon={faStar} /></span>}
                         
                         </h6>
                 </div>
