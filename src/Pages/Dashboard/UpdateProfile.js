@@ -54,11 +54,6 @@ const UpdateProfile = () => {
 
     return (
         <div className='py-10 '>
-            <div className="avatar w-full flex justify-center ">
-                <div className="w-32 text-center  rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-                    <img src="https://api.lorem.space/image/face?hash=3174" alt='' />
-                </div>
-            </div>
             <form className='lg:w-3/4 md:w-4/5 mx-auto' onSubmit={handleSubmit(onSubmit)} >
 
                 <div className="form-control">

@@ -17,7 +17,7 @@ const Dashboard = () => {
             </div>
             <div className="drawer-side  h-[100vh] ">
                 <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
-                <ul className="menu p-4 overflow-y-auto w-54  bg-secondary text-base-content py-10">
+                <ul className="menu p-4 overflow-y-auto lg:w-54 w-56  bg-secondary text-base-content py-10">
                     {/* <!-- Sidebar content here --> */}
 
                     {admin ?
