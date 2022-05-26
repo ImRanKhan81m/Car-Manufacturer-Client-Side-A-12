@@ -34,7 +34,7 @@ function App() {
         {/* <Route path="/about" element={<About/>}/> */}
         <Route path="/reviews" element={<Review />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/profile" element={<MyProfile />} />
+        <Route path="/portfolio" element={<MyProfile />} />
         <Route path="/order/:manageId" element={
           <RequireAuth>
             <Purchase />
