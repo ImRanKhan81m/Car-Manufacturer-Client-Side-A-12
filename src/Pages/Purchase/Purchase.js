@@ -84,9 +84,9 @@ const Purchase = () => {
 
     return (
         <div className='mt-10'>
-            <div class=" lg:w-5/12 lg:w-7/12  mx-auto ">
+            <div className=" lg:w-5/12 lg:w-7/12  mx-auto ">
                 <div className=' card lg:card-side shadow-xl border'>
-                    <div class="card-body">
+                    <div className="card-body">
                         <form onSubmit={handleSubmit}>
                             <div>
                                 <h1 className='font-bold text-2xl'>Your Address :</h1>
@@ -95,7 +95,7 @@ const Purchase = () => {
 
                                 <input type="email" name='email' disabled value={user?.email} className="input input-bordered w-full my-2 focus:outline-none" />
 
-                                <textarea name='address' class="textarea textarea-bordered w-full" placeholder="Your Address"></textarea>
+                                <textarea name='address' className="textarea textarea-bordered w-full" placeholder="Your Address"></textarea>
                             </div>
 
                             <div className='mt-10 '>

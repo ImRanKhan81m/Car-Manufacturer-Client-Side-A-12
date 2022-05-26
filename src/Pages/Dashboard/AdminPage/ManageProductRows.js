@@ -1,9 +1,9 @@
 import React from 'react';
 import { toast } from 'react-toastify';
 
-const ManageProductRows = ({ product, index, refetch , setDeleteTool}) => {
+const ManageProductRows = ({ product, index, refetch, setDeleteTool }) => {
 
-    
+
     return (
         <tr>
             <th>{++index}</th>
@@ -18,8 +18,8 @@ const ManageProductRows = ({ product, index, refetch , setDeleteTool}) => {
             <td>{product?.price} $</td>
             <td><button className='btn btn-success btn-sm'>Update</button></td>
             <td>
-                <label onClick={()=>setDeleteTool(product)} for="deleteConfirmModal" class="btn btn-error btn-sm">Delete</label>
-                </td>
+                <label onClick={() => setDeleteTool(product)} htmlFor="deleteConfirmModal" className="btn btn-error btn-sm">Delete</label>
+            </td>
         </tr>
     );
 };

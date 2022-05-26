@@ -20,7 +20,7 @@ const MyOrdersRow = ({ order, index, setDeleteOrder }) => {
                 <td>
                     <>
                         <Link to={`/dashboard/payment/${order._id}`}><button className='btn btn-sm btn-success mb-1'>Pay Now</button></Link> <br />
-                        <label onClick={()=>setDeleteOrder(order)} for="deleteOrderModal" class="btn btn-error btn-xs">Cancel Order</label>
+                        <label onClick={() => setDeleteOrder(order)} htmlFor="deleteOrderModal" className="btn btn-error btn-xs">Cancel Order</label>
                     </>
                 </td>}
 

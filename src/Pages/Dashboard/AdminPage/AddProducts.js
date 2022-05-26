@@ -79,7 +79,7 @@ const AddProducts = () => {
                     <label className="label">
                         <span className="label-text">Add a short description</span>
                     </label>
-                    <textarea name='address' class="textarea textarea-bordered w-full" type="text"
+                    <textarea name='address' className="textarea textarea-bordered w-full" type="text"
                         placeholder="Enter a description"
                         className="input input-bordered focus:outline-none"
                         {...register("description", {

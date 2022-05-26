@@ -21,13 +21,14 @@ const Navbar = () => {
         {/* <li><NavLink to="/about">About</NavLink></li> */}
         <li><NavLink to="/reviews">Review</NavLink></li>
         <li><NavLink to="/contact">Contact</NavLink></li>
-        {
-            user && <li><NavLink to="/dashboard">Dashboard</NavLink></li>
-        }
+
         {
             user && <li><NavLink to="/profile">MyProfile</NavLink></li>
         }
-        
+        {
+            user && <li><NavLink to="/dashboard">Dashboard</NavLink></li>
+        }
+
         <li>{user ? <NavLink onClick={logout} to="/login">SignOut</NavLink> : <NavLink to="/login">Login</NavLink>}</li>
 
     </>
@@ -53,8 +54,8 @@ const Navbar = () => {
                 </div>
                 <div className='navbar-end lg:hidden'>
                     {
-                        pathname.includes("dashboard") && (<label for="my-drawer-2" tabIndex="1" class="btn btn-ghost ">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" /></svg>
+                        pathname.includes("dashboard") && (<label htmlFor="my-drawer-2" tabIndex="1" className="btn btn-ghost ">
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h7" /></svg>
                         </label>)
                     }
                 </div>

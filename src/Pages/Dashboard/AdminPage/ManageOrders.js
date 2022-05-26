@@ -20,8 +20,8 @@ const ManageOrders = () => {
     return (
         <div>
             <h2 className='text-2xl font-bold my-5'>Total Order: {orders?.length}</h2>
-            <div class="overflow-x-auto">
-                <table class="table table-compact w-full">
+            <div className="overflow-x-auto">
+                <table className="table table-compact w-full">
                     <thead>
                         <tr>
                             <th>#</th>
@@ -36,8 +36,8 @@ const ManageOrders = () => {
                     <tbody>
                         {
                             orders?.map((order, index) => <ManageOrderRow
-                            order={order}
-                            index={index}
+                                order={order}
+                                index={index}
                             ></ManageOrderRow>)
                         }
 

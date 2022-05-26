@@ -12,69 +12,69 @@ const NewArrivals = () => {
             <h2 className='text-center text-primary  font-bold'>TOP NEW IN THE WEEK</h2>
             <h1 className='text-center text-3xl font-bold'>NEW ARRIVALS</h1>
             <div className='grid lg:grid-cols-4 md:grid-cols-4 sm:grid-cols-2 gap-5  pt-10'>
-                <div class="card bg-base-100 shadow-xl border">
-                    <figure class="p-0">
-                        <img src={img1} alt="Shoes" class="rounded-xl" />
+                <div className="card bg-base-100 shadow-xl border">
+                    <figure className="p-0">
+                        <img src={img1} alt="Shoes" className="rounded-xl" />
                     </figure>
-                    <div class="card-body items-center text-center py-0 px-2 lg:mb-10 mb-5">
-                        <h2 class="card-title">VOLUP TATEM ACCU</h2>
-                        <div class="rating rating-sm">
-                            <input type="radio" name="rating-9" class="rating-hidden" />
-                            <input type="radio" name="rating-9" class="mask mask-star-2" />
-                            <input type="radio" name="rating-9" class="mask mask-star-2" />
-                            <input type="radio" name="rating-9" class="mask mask-star-2" />
-                            <input type="radio" name="rating-9" class="mask mask-star-2" />
-                            <input type="radio" name="rating-9" class="mask mask-star-2" />
+                    <div className="card-body items-center text-center py-0 px-2 lg:mb-10 mb-5">
+                        <h2 className="card-title">VOLUP TATEM ACCU</h2>
+                        <div className="rating rating-sm">
+                            <input type="radio" name="rating-9" className="rating-hidden" />
+                            <input type="radio" name="rating-9" className="mask mask-star-2" />
+                            <input type="radio" name="rating-9" className="mask mask-star-2" />
+                            <input type="radio" name="rating-9" className="mask mask-star-2" />
+                            <input type="radio" name="rating-9" className="mask mask-star-2" />
+                            <input type="radio" name="rating-9" className="mask mask-star-2" />
                         </div>
                         <p className='font-bold text-xl'>$60.00</p>
                     </div>
                 </div>
-                <div class="card bg-base-100 shadow-xl border">
-                    <figure class="p-0">
-                        <img src={img2} alt="Shoes" class="rounded-xl" />
+                <div className="card bg-base-100 shadow-xl border">
+                    <figure className="p-0">
+                        <img src={img2} alt="Shoes" className="rounded-xl" />
                     </figure>
-                    <div class="card-body items-center text-center py-0 px-2 lg:mb-10 mb-5">
-                        <h2 class="card-title">STUCKRUM BRESAO</h2>
-                        <div class="rating rating-sm">
-                            <input type="radio" name="rating-9" class="rating-hidden" />
-                            <input type="radio" name="rating-9" class="mask mask-star-2" />
-                            <input type="radio" name="rating-9" class="mask mask-star-2" />
-                            <input type="radio" name="rating-9" class="mask mask-star-2" />
-                            <input type="radio" name="rating-9" class="mask mask-star-2" />
-                            <input type="radio" name="rating-9" class="mask mask-star-2" />
+                    <div className="card-body items-center text-center py-0 px-2 lg:mb-10 mb-5">
+                        <h2 className="card-title">STUCKRUM BRESAO</h2>
+                        <div className="rating rating-sm">
+                            <input type="radio" name="rating-9" className="rating-hidden" />
+                            <input type="radio" name="rating-9" className="mask mask-star-2" />
+                            <input type="radio" name="rating-9" className="mask mask-star-2" />
+                            <input type="radio" name="rating-9" className="mask mask-star-2" />
+                            <input type="radio" name="rating-9" className="mask mask-star-2" />
+                            <input type="radio" name="rating-9" className="mask mask-star-2" />
                         </div>
                         <p className='font-bold text-xl'>$76.00</p>
                     </div>
                 </div>
-                <div class="card bg-base-100 shadow-xl border">
-                    <figure class="p-0">
-                        <img src={img3} alt="Shoes" class="rounded-xl" />
+                <div className="card bg-base-100 shadow-xl border">
+                    <figure className="p-0">
+                        <img src={img3} alt="Shoes" className="rounded-xl" />
                     </figure>
-                    <div class="card-body items-center text-center py-0 px-2 lg:mb-10 mb-5">
-                        <h2 class="card-title">RENPUIS CONSUAT</h2>
-                        <div class="rating rating-sm">
-                            <input type="radio" name="rating-9" class="mask mask-star" />
-                            <input type="radio" name="rating-1" class="mask mask-star" />
-                            <input type="radio" name="rating-1" class="mask mask-star" />
-                            <input type="radio" name="rating-1" class="mask mask-star" />
-                            <input type="radio" name="rating-1" class="mask mask-star" />
+                    <div className="card-body items-center text-center py-0 px-2 lg:mb-10 mb-5">
+                        <h2 className="card-title">RENPUIS CONSUAT</h2>
+                        <div className="rating rating-sm">
+                            <input type="radio" name="rating-9" className="mask mask-star" />
+                            <input type="radio" name="rating-1" className="mask mask-star" />
+                            <input type="radio" name="rating-1" className="mask mask-star" />
+                            <input type="radio" name="rating-1" className="mask mask-star" />
+                            <input type="radio" name="rating-1" className="mask mask-star" />
                         </div>
                         <p className='font-bold text-xl text-primary'>$35.00</p>
                     </div>
                 </div>
-                <div class="card bg-base-100 shadow-xl border">
-                    <figure class="p-0">
-                        <img src={img4} alt="Shoes" class="rounded-xl" />
+                <div className="card bg-base-100 shadow-xl border">
+                    <figure className="p-0">
+                        <img src={img4} alt="Shoes" className="rounded-xl" />
                     </figure>
-                    <div class="card-body items-center text-center py-0 px-2 lg:mb-10 mb-5">
-                        <h2 class="card-title">REMPORUM STICK</h2>
-                        <div class="rating rating-sm">
-                            <input type="radio" name="rating-9" class="rating-hidden" />
-                            <input type="radio" name="rating-9" class="mask mask-star-2" />
-                            <input type="radio" name="rating-9" class="mask mask-star-2" />
-                            <input type="radio" name="rating-9" class="mask mask-star-2" />
-                            <input type="radio" name="rating-9" class="mask mask-star-2" />
-                            <input type="radio" name="rating-9" class="mask mask-star-2" />
+                    <div className="card-body items-center text-center py-0 px-2 lg:mb-10 mb-5">
+                        <h2 className="card-title">REMPORUM STICK</h2>
+                        <div className="rating rating-sm">
+                            <input type="radio" name="rating-9" className="rating-hidden" />
+                            <input type="radio" name="rating-9" className="mask mask-star-2" />
+                            <input type="radio" name="rating-9" className="mask mask-star-2" />
+                            <input type="radio" name="rating-9" className="mask mask-star-2" />
+                            <input type="radio" name="rating-9" className="mask mask-star-2" />
+                            <input type="radio" name="rating-9" className="mask mask-star-2" />
                         </div>
                         <p className='font-bold text-xl'>$96.00</p>
                     </div>
@@ -86,7 +86,7 @@ const NewArrivals = () => {
                     <img className='w-full' src={img5} alt="" />
                 </div>
                 <div>
-                    <img className='w-full'src={img6} alt="" />
+                    <img className='w-full' src={img6} alt="" />
                 </div>
             </div>
         </div>

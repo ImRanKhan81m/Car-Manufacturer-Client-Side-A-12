@@ -47,8 +47,8 @@ const Login = () => {
 
     return (
         <div className='flex bg-secondary justify-center items-center h-[93vh] px-5'>
-            <div class="card flex-shrink-0 w-full lg:max-w-lg md:max-w-lg sm:max-w-lg max-w-sm shadow-2xl bg-base-100">
-                <div class="card-body">
+            <div className="card flex-shrink-0 w-full lg:max-w-lg md:max-w-lg sm:max-w-lg max-w-sm shadow-2xl bg-base-100">
+                <div className="card-body">
                     <h1 className='text-3xl text-center font-bold'>Login</h1>
                     <form onSubmit={handleSubmit(onSubmit)}>
 
@@ -105,8 +105,8 @@ const Login = () => {
                         <input className='btn w-full btn-primary ' type="submit" value="LOGIN" />
                     </form>
                     <p className='py-3 text-center'>New Customer? <Link to="/signup" ><span className=' link'>Create New Account</span></Link></p>
-                    <div class="divider">OR</div>
-                    <button onClick={() => signInWithGoogle()} class="btn btn-outline">Continue with google</button>
+                    <div className="divider">OR</div>
+                    <button onClick={() => signInWithGoogle()} className="btn btn-outline">Continue with google</button>
                     {socialError}
                 </div>
             </div>

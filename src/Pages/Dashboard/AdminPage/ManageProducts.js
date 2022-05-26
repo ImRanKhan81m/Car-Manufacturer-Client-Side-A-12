@@ -22,8 +22,8 @@ const ManageProducts = () => {
     return (
         <div>
             <h2 className='text-2xl font-bold my-5'>Total Order: {products?.length}</h2>
-            <div class="overflow-x-auto">
-                <table class="table table-compact w-full">
+            <div className="overflow-x-auto">
+                <table className="table table-compact w-full">
                     <thead>
                         <tr>
                             <th>#</th>
@@ -51,9 +51,9 @@ const ManageProducts = () => {
             </div>
             {
                 deleteTool && <DeleteConfirmModal
-                deleteTool={deleteTool}
-                refetch={refetch}
-                setDeleteTool={setDeleteTool}
+                    deleteTool={deleteTool}
+                    refetch={refetch}
+                    setDeleteTool={setDeleteTool}
                 ></DeleteConfirmModal>
 
             }

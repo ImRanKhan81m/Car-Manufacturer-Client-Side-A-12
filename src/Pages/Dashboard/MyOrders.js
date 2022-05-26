@@ -1,5 +1,5 @@
 
-import React, {useState } from 'react';
+import React, { useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useQuery } from 'react-query';
 import auth from '../../firebase.init';
@@ -27,8 +27,8 @@ const MyOrders = () => {
     return (
         <div>
             <h2 className='text-2xl font-bold my-5'>Your Total Order: {orders?.length}</h2>
-            <div class="overflow-x-auto">
-                <table class="table table-compact w-full">
+            <div className="overflow-x-auto">
+                <table className="table table-compact w-full">
                     <thead>
                         <tr>
                             <th>#</th>
@@ -42,10 +42,10 @@ const MyOrders = () => {
                     <tbody>
                         {
                             orders?.map((order, index) => <MyOrdersRow
-                            order={order}
-                            index={index}
-                            refetch={refetch}
-                            setDeleteOrder={setDeleteOrder}
+                                order={order}
+                                index={index}
+                                refetch={refetch}
+                                setDeleteOrder={setDeleteOrder}
                             ></MyOrdersRow>)
                         }
 
@@ -54,9 +54,9 @@ const MyOrders = () => {
             </div>
             {
                 deleteOrder && <DeleteOrderModal
-                deleteOrder={deleteOrder}
-                refetch={refetch}
-                setDeleteOrder={setDeleteOrder}
+                    deleteOrder={deleteOrder}
+                    refetch={refetch}
+                    setDeleteOrder={setDeleteOrder}
                 ></DeleteOrderModal>
 
             }

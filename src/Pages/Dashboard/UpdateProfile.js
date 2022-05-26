@@ -54,8 +54,8 @@ const UpdateProfile = () => {
 
     return (
         <div className='py-10 '>
-            <div class="avatar w-full flex justify-center ">
-                <div class="w-32 text-center  rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+            <div className="avatar w-full flex justify-center ">
+                <div className="w-32 text-center  rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
                     <img src="https://api.lorem.space/image/face?hash=3174" alt='' />
                 </div>
             </div>
@@ -87,7 +87,7 @@ const UpdateProfile = () => {
                     <label className="label">
                         <span className="label-text">Education Level</span>
                     </label>
-                    <select class="select w-full  select-bordered focus:outline-none"
+                    <select className="select w-full  select-bordered focus:outline-none"
                         {...register("education", {
                             required: {
                                 value: true,
@@ -111,7 +111,7 @@ const UpdateProfile = () => {
                     <label className="label">
                         <span className="label-text">Occupation</span>
                     </label>
-                    <select class="select w-full  select-bordered focus:outline-none"
+                    <select className="select w-full  select-bordered focus:outline-none"
                         {...register("occupation", {
                             required: {
                                 value: true,
