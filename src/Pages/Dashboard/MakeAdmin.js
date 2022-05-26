@@ -42,6 +42,7 @@ const MakeAdmin = () => {
                             ></AdminRow>)
                         }
                     </tbody>
+                    
                 </table>
             </div>
         </div>
