@@ -5,11 +5,11 @@ const ManufacturerProducts = () => {
     const [tools, setTools] = useState([]);
 
 
-    useEffect(()=>{
-        fetch('http://localhost:5000/tools')
-        .then(res=>res.json())
-        .then(data=>setTools(data.reverse().slice(0, 6)))
-    },[])
+    useEffect(() => {
+        fetch('https://sheltered-taiga-12711.herokuapp.com/tools')
+            .then(res => res.json())
+            .then(data => setTools(data.reverse().slice(0, 6)))
+    }, [])
 
 
     return (
@@ -19,9 +19,9 @@ const ManufacturerProducts = () => {
 
             <div className='mid-content grid grid-cols-3 gap-5 '>
                 {
-                    tools.map(tool=> <ToolsProduct
-                    key={tool._id}
-                    tool={tool}
+                    tools.map(tool => <ToolsProduct
+                        key={tool._id}
+                        tool={tool}
                     ></ToolsProduct>)
                 }
             </div>

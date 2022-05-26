@@ -12,7 +12,7 @@ const MyOrders = () => {
     const [deleteOrder, setDeleteOrder] = useState(null);
 
     const { data: orders, isLoading, refetch } = useQuery('users', () =>
-        fetch(`http://localhost:5000/order?customer=${user.email}`, {
+        fetch(`https://sheltered-taiga-12711.herokuapp.com/order?customer=${user.email}`, {
             method: 'GET',
             headers: {
                 'authorization': `Bearer ${localStorage.getItem('accessToken')}`

@@ -14,7 +14,7 @@ const CheckoutForm = ({ product }) => {
     const { _id, totalPrice, customer, customerName } = product
 
     useEffect(() => {
-        fetch('http://localhost:5000/create-payment-intent', {
+        fetch('https://sheltered-taiga-12711.herokuapp.com/create-payment-intent', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
@@ -77,7 +77,7 @@ const CheckoutForm = ({ product }) => {
 
             }
 
-            fetch(`http://localhost:5000/order/${_id}`, {
+            fetch(`https://sheltered-taiga-12711.herokuapp.com/order/${_id}`, {
                 method: 'PATCH',
                 headers: {
                     'content-type': 'application/json',

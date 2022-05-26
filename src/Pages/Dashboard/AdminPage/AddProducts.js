@@ -28,7 +28,7 @@ const AddProducts = () => {
                         quantity: data.quantity,
                         img: img
                     }
-                    fetch('http://localhost:5000/add-tools', {
+                    fetch('https://sheltered-taiga-12711.herokuapp.com/add-tools', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json',

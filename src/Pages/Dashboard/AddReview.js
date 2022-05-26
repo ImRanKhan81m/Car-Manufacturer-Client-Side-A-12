@@ -27,7 +27,7 @@ const AddReview = () => {
                         rating: data.rating,
                         img: img
                     }
-                    fetch('http://localhost:5000/add-review', {
+                    fetch('https://sheltered-taiga-12711.herokuapp.com/add-review', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json',

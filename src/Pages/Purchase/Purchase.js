@@ -17,7 +17,7 @@ const Purchase = () => {
 
 
     useEffect(() => {
-        fetch(`http://localhost:5000/order/${manageId}`)
+        fetch(`https://sheltered-taiga-12711.herokuapp.com/order/${manageId}`)
             .then(res => res.json())
             .then(data => setProduct(data))
     }, [manageId, isReload]);
@@ -62,7 +62,7 @@ const Purchase = () => {
         }
 
         if (value >= 10 && value <= stockProduct) {
-            fetch('http://localhost:5000/order', {
+            fetch('https://sheltered-taiga-12711.herokuapp.com/order', {
                 method: "POST",
                 headers: {
                     'content-type': 'application/json'

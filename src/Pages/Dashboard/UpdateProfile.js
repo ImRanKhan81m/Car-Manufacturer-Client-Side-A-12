@@ -36,7 +36,7 @@ const UpdateProfile = () => {
                         occupation: data.occupation,
                         linkedIn: data.linkedIn
                     }
-                    fetch(`http://localhost:5000/profile/${email}`, {
+                    fetch(`https://sheltered-taiga-12711.herokuapp.com/profile/${email}`, {
                         method: 'PUT',
                         headers: {
                             'content-type': 'application/json'

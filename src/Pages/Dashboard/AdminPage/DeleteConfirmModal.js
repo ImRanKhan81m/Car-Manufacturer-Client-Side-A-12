@@ -5,7 +5,7 @@ const DeleteConfirmModal = ({ deleteTool, refetch, setDeleteTool }) => {
     const { toolName, _id } = deleteTool;
 
     const handleDelete = () => {
-        fetch(`http://localhost:5000/delete-tools/${_id}`, {
+        fetch(`https://sheltered-taiga-12711.herokuapp.com/delete-tools/${_id}`, {
             method: 'DELETE',
             headers: {
                 'authorization': `Bearer ${localStorage.getItem('accessToken')}`
