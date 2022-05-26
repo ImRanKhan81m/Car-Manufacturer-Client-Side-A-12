@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -26,7 +27,7 @@ const MyOrdersRow = ({ order, index }) => {
 
             <td>
                 {(order.totalPrice && order.paid) &&
-                    <button className='btn btn-sm btn-success'>Paid </button>}
+                    <button className='btn btn-sm btn-success'> Paid </button>}
             </td>
         </tr>
     );
