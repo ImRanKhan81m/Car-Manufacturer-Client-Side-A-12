@@ -54,6 +54,7 @@ const UpdateProfile = () => {
 
     return (
         <div className='py-10 '>
+            <h1 className='text-center font-bold text-3xl'>My Profile</h1>
             <form className='lg:w-3/4 md:w-4/5 mx-auto' onSubmit={handleSubmit(onSubmit)} >
 
                 <div className="form-control">
