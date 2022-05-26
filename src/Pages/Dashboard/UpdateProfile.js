@@ -156,7 +156,7 @@ const UpdateProfile = () => {
                     </label>
                     <input
                         type="number"
-                        placeholder="Enter Your LinkedIn Profile Link"
+                        placeholder="Enter Your Phone Number"
                         className="input input-bordered focus:outline-none"
                         {...register("number", {
                             required: {

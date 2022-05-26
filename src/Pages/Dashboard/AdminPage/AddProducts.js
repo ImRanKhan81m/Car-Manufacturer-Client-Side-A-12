@@ -104,7 +104,7 @@ const AddProducts = () => {
                         min="0"
                         placeholder="Enter Product Price"
                         className="input input-bordered focus:outline-none"
-                        {...register("education", {
+                        {...register("price", {
                             required: {
                                 value: true,
                                 message: 'Price is Required'

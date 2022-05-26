@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 const ToolsProduct = ({ tool }) => {
     const {img, toolName,description, price, quantity } = tool;
     const navigate = useNavigate();
+    console.log(price);
 
     const handleOrderProduct = id =>{
         navigate(`/order/${id}`)
