@@ -16,9 +16,9 @@ const ManageProductRows = ({ product, index, refetch, setDeleteTool }) => {
                 </div></td>
             <td> {product?.quantity} Pcs</td>
             <td>{product?.price} $</td>
-            <td><button className='btn btn-success btn-sm'>Update</button></td>
+            <td><button className='btn btn-success btn-xs'>Update</button></td>
             <td>
-                <label onClick={() => setDeleteTool(product)} htmlFor="deleteConfirmModal" className="btn btn-error btn-sm">Delete</label>
+                <label onClick={() => setDeleteTool(product)} htmlFor="deleteConfirmModal" className="btn btn-error btn-xs">Delete</label>
             </td>
         </tr>
     );
