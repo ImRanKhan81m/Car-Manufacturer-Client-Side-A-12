@@ -4,7 +4,6 @@ import img1 from '../../assets/portfolio/nike-shoes.png'
 import img2 from '../../assets/portfolio/Screenshot 2022-05-26 204112.png'
 import img3 from '../../assets/portfolio/fixpro owner.png'
 import img4 from '../../assets/portfolio/Screenshot 2022-05-26 203938.png'
-import { Link } from 'react-router-dom';
 import Footer from '../Shared/Footer';
 
 
@@ -12,7 +11,7 @@ const MyProfile = () => {
     return (
         <div className=' bg-[#fef6eecc]'>
             <div className='mid-content '>
-                <div className='py-20 grid gap-5 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1'>
+                <div className='lg:py-20 md:py-20 sm:py-10 py-5 grid gap-5 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1'>
                     <div className='flex justify-center items-center'>
                         <div>
                             <div class="avatar flex justify-center mb-3">

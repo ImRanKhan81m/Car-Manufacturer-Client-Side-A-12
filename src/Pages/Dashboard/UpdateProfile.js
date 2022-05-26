@@ -59,7 +59,7 @@ const UpdateProfile = () => {
                     <img src="https://api.lorem.space/image/face?hash=3174" alt='' />
                 </div>
             </div>
-            <form className='w-3/4 mx-auto' onSubmit={handleSubmit(onSubmit)} >
+            <form className='lg:w-3/4 md:w-4/5 mx-auto' onSubmit={handleSubmit(onSubmit)} >
 
                 <div className="form-control">
                     <label className="label">
