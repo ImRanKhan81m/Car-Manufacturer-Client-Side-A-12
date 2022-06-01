@@ -102,10 +102,16 @@ const NewArrivals = () => {
             </div>
 
             <div className='grid lg:grid-cols-2 md:grid-cols-2 mt-20 w-full lg:gap-10 gap-5'>
-                <div>
+                <div data-aos="fade-right"
+                    data-aos-offset="200"
+                    data-aos-delay="50"
+                    data-aos-duration="1000">
                     <img className='w-full' src={img5} alt="" />
                 </div>
-                <div>
+                <div data-aos="fade-left"
+                    data-aos-offset="200"
+                    data-aos-delay="50"
+                    data-aos-duration="1000">
                     <img className='w-full' src={img6} alt="" />
                 </div>
             </div>

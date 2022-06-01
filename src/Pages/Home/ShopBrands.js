@@ -9,7 +9,12 @@ import img6 from '../../assets/Brand/b6.jpg'
 const ShopBrands = () => {
     return (
         <div className='my-14'>
-            <div className='mid-content'>
+            <div
+                data-aos="fade-up"
+                data-aos-offset="200"
+                data-aos-delay="50"
+                data-aos-duration="1000"
+                className='mid-content'>
                 <p className='text-center text-primary font-bold'>TOP QUALITY PARTNERS</p>
                 <h1 className='text-center text-3xl font-bold'>SHOP BY BRANDS</h1>
                 <div className='grid lg:grid-cols-6 md:grid-cols-3 sm:grid-cols-3 grid-cols-3 lg:mt-10 mt-5  shadow-xl'>

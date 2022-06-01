@@ -5,7 +5,12 @@ import React from 'react';
 const ReviewItems = ({ review }) => {
     const { name, description, rating, img } = review;
     return (
-        <div className="card bg-base-100 shadow-xl border p-5">
+        <div
+            data-aos="zoom-in"
+            data-aos-offset="200"
+            data-aos-delay="50"
+            data-aos-duration="1000"
+            className="card bg-base-100 shadow-xl border p-5">
             <div className='flex justify-start items-center mb-5'>
                 <img className='rounded-full' style={{ width: '20%' }} src={img} alt="" />
                 <div className='ml-3'>

@@ -12,7 +12,12 @@ const CategoriesShop = () => {
             <p className='text-primary font-bold text-center'>TOP FEATURED COLLECTIONS</p>
             <h1 className='text-center font-bold text-3xl mb-10'>SHOP BY CATEGORIES</h1>
             <div className='grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 mid-content gap-5'>
-                <div className="card card-side bg-base-100 shadow-xl">
+                <div
+                    data-aos="fade-down-right"
+                    data-aos-offset="200"
+                    data-aos-delay="50"
+                    data-aos-duration="1000"
+                    className="card card-side bg-base-100 shadow-xl">
                     <figure><img src={img1} alt="Movie" /></figure>
                     <div className="card-body py-10 px-5">
                         <h2 className="card-title font-bold">WHEELS & TIRES</h2>
@@ -26,7 +31,12 @@ const CategoriesShop = () => {
                         </div>
                     </div>
                 </div>
-                <div className="card card-side bg-base-100 shadow-xl">
+                <div
+                    data-aos="fade-down"
+                    data-aos-offset="200"
+                    data-aos-delay="50"
+                    data-aos-duration="1000"
+                    className="card card-side bg-base-100 shadow-xl">
                     <figure><img src={img2} alt="Movie" /></figure>
                     <div className="card-body py-10 px-5">
                         <h2 className="card-title font-bold">WHEELS & TIRES</h2>
@@ -40,7 +50,12 @@ const CategoriesShop = () => {
                         </div>
                     </div>
                 </div>
-                <div className="card card-side bg-base-100 shadow-xl">
+                <div
+                    data-aos="fade-down-left"
+                    data-aos-offset="200"
+                    data-aos-delay="50"
+                    data-aos-duration="1000"
+                    className="card card-side bg-base-100 shadow-xl">
                     <figure><img src={img3} alt="Movie" /></figure>
                     <div className="card-body py-10 px-5">
                         <h2 className="card-title font-bold">WHEELS & TIRES</h2>
@@ -54,7 +69,13 @@ const CategoriesShop = () => {
                         </div>
                     </div>
                 </div>
-                <div className="card card-side bg-base-100 shadow-xl">
+                <div
+                    data-aos="fade-up-right"
+                    data-aos-offset="200"
+                    data-aos-delay="50"
+                    data-aos-duration="1000"
+
+                    className="card card-side bg-base-100 shadow-xl">
                     <figure><img src={img4} alt="Movie" /></figure>
                     <div className="card-body py-10 px-5">
                         <h2 className="card-title font-bold">WHEELS & TIRES</h2>
@@ -68,7 +89,12 @@ const CategoriesShop = () => {
                         </div>
                     </div>
                 </div>
-                <div className="card card-side bg-base-100 shadow-xl">
+                <div
+                    data-aos="fade-up"
+                    data-aos-offset="200"
+                    data-aos-delay="50"
+                    data-aos-duration="1000"
+                    className="card card-side bg-base-100 shadow-xl">
                     <figure><img src={img5} alt="Movie" /></figure>
                     <div className="card-body py-10 px-5">
                         <h2 className="card-title font-bold">WHEELS & TIRES</h2>
@@ -82,7 +108,13 @@ const CategoriesShop = () => {
                         </div>
                     </div>
                 </div>
-                <div className="card card-side bg-base-100 shadow-xl">
+                <div
+                    data-aos="fade-up-left"
+                    data-aos-offset="200"
+                    data-aos-delay="50"
+                    data-aos-duration="1000"
+
+                    className="card card-side bg-base-100 shadow-xl">
                     <figure><img src={img6} alt="Movie" /></figure>
                     <div className="card-body py-10 px-5">
                         <h2 className="card-title font-bold">WHEELS & TIRES</h2>
