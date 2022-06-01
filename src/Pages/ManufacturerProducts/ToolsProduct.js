@@ -11,7 +11,12 @@ const ToolsProduct = ({ tool }) => {
 
 
     return (
-        <div className="card bg-base-100 shadow-xl border">
+        <div
+            data-aos="zoom-in"
+            data-aos-offset="200"
+            data-aos-delay="50"
+            data-aos-duration="1000"
+            className="card bg-base-100 shadow-xl border">
             <figure><img src={img} alt="Shoes" /></figure>
             <div className="card-body">
                 <h2 className="card-title font-bold mx-auto">{toolName}</h2>

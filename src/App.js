@@ -22,9 +22,17 @@ import AddProducts from "./Pages/Dashboard/AdminPage/AddProducts";
 import UpdateProfile from "./Pages/Dashboard/UpdateProfile";
 import Payment from "./Pages/Dashboard/Payment";
 import NotFoundPage from "./Pages/NotFoundPage/NotFoundPage";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from "react";
 
 
 function App() {
+
+  useEffect(() => {
+    AOS.init();
+  }, [])
+
   return (
     <div>
       <Navbar />

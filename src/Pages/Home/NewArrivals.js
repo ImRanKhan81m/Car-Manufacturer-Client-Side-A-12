@@ -12,7 +12,12 @@ const NewArrivals = () => {
             <h2 className='text-center text-primary  font-bold'>TOP NEW IN THE WEEK</h2>
             <h1 className='text-center text-3xl font-bold'>NEW ARRIVALS</h1>
             <div className='grid lg:grid-cols-4 md:grid-cols-4 sm:grid-cols-2 gap-5  pt-10'>
-                <div className="card bg-base-100 shadow-xl border">
+                <div
+                    data-aos="zoom-in"
+                    data-aos-offset="200"
+                    data-aos-delay="50"
+                    data-aos-duration="1000"
+                    className="card bg-base-100 shadow-xl border">
                     <figure className="p-0">
                         <img src={img1} alt="Shoes" className="rounded-xl" />
                     </figure>
@@ -29,7 +34,12 @@ const NewArrivals = () => {
                         <p className='font-bold text-xl'>$60.00</p>
                     </div>
                 </div>
-                <div className="card bg-base-100 shadow-xl border">
+                <div
+                    data-aos="zoom-in"
+                    data-aos-offset="200"
+                    data-aos-delay="50"
+                    data-aos-duration="1000"
+                    className="card bg-base-100 shadow-xl border">
                     <figure className="p-0">
                         <img src={img2} alt="Shoes" className="rounded-xl" />
                     </figure>
@@ -46,7 +56,12 @@ const NewArrivals = () => {
                         <p className='font-bold text-xl'>$76.00</p>
                     </div>
                 </div>
-                <div className="card bg-base-100 shadow-xl border">
+                <div
+                    data-aos="zoom-in"
+                    data-aos-offset="200"
+                    data-aos-delay="50"
+                    data-aos-duration="1000"
+                    className="card bg-base-100 shadow-xl border">
                     <figure className="p-0">
                         <img src={img3} alt="Shoes" className="rounded-xl" />
                     </figure>
@@ -62,7 +77,12 @@ const NewArrivals = () => {
                         <p className='font-bold text-xl text-primary'>$35.00</p>
                     </div>
                 </div>
-                <div className="card bg-base-100 shadow-xl border">
+                <div
+                    data-aos="zoom-in"
+                    data-aos-offset="200"
+                    data-aos-delay="50"
+                    data-aos-duration="1000"
+                    className="card bg-base-100 shadow-xl border">
                     <figure className="p-0">
                         <img src={img4} alt="Shoes" className="rounded-xl" />
                     </figure>
